@@ -40,7 +40,7 @@ const isMobile = useMediaQuery({ maxWidth:767})
     scrub: true,
   }
 })
-.to('.right-leaf',{y:200},0)
+.to('.right-leaf',{y:70},0)
 .to('.left-leaf',{y:-200},0)
 
 
@@ -54,6 +54,7 @@ const tl=gsap.timeline({
         start:startvalue,
         end:endvalue,
         scrub:true,
+        pin:true
     }
 })
  vedioRef.current.onloadedmetadata =()=>{

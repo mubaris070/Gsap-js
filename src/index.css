@@ -96,14 +96,14 @@ body {
         }
 
         .left-leaf {
-            @apply absolute left-0 md:-left-[135px] md:top-20 xl:top-36 2xl:top-[220px] md:bottom-auto -bottom-20 md:w-[300px] w-1/3
+            @apply absolute -left-16 md:-left-[135px] top-[460px]  md:top-[220px] md:bottom-auto -bottom-20 md:w-[300px] w-1/3
             rotate-[39.75deg];
 
         }
 
         .right-leaf {
-            @apply absolute right-0 md:-right-[150px] md:top-20 xl:top-36 2xl:top-[70px] md:bottom-auto -bottom-20 md:w-[300px] w-1/3
-            rotate-[330deg];
+            @apply absolute -right-16 md:-right-[150px] top-[700px] md:top-[70px] md:bottom-auto -bottom-20 md:w-[300px] w-1/3
+            rotate-[310deg];
 
         }
 
@@ -143,23 +143,27 @@ body {
     #cocktails {
         @apply relative min-h-dvh w-full overflow-hidden;
 
-        #c-left-leaf {
-            @apply absolute left-0 md:bottom-0 md:top-auto -top-20 md:w-fit w-1/3;
+        .c-left-leaf {
+            @apply hidden md:block absolute left-5 md:-left-[135px]  -top-5 md:top-[150px] md:bottom-auto -bottom-20 md:w-[300px] w-1/3
+            rotate-[39.75deg];
+
         }
 
-        #c-right-leaf {
-            @apply absolute right-0 md:bottom-0 md:top-auto -top-20 md:w-fit w-1/3;
+        .c-right-leaf {
+            @apply hidden md:block absolute right-5 md:-right-[110px]  top-45 md:top-[190px] md:bottom-auto -bottom-20 md:w-[300px] w-1/3
+            rotate-[330deg];
+
         }
 
         .list {
-            @apply container mx-auto relative z-10 flex md:flex-row flex-col justify-between items-start gap-20 pt-40 2xl:px-0 px-5;
+            @apply container mx-auto relative z-10 flex md:flex-row flex-col justify-between items-start gap-20 pt-40 2xl:px-20 px-5 top-0;
 
             .popular {
                 @apply space-y-8 w-full md:w-fit;
             }
 
             .loved {
-                @apply space-y-8 w-full md:w-fit pb-20 md:pb-0;
+                @apply space-y-8 w-full md:w-fit pb-18 md:pb-0;
             }
 
             h2 {
@@ -189,7 +193,7 @@ body {
     }
 
     #about {
-        @apply min-h-screen py-28 2xl:px-0 px-5 container mx-auto;
+        @apply min-h-screen py-28 2xl:px-12 px-5 container mx-auto;
 
         .content {
             @apply grid grid-cols-1 lg:grid-cols-12 gap-5;
@@ -220,7 +224,7 @@ body {
         }
 
         .top-grid {
-            @apply grid grid-cols-1 xl:grid-cols-12 gap-5 mb-5 md:px-0 px-5;
+            @apply grid grid-cols-1 md:grid-cols-12 gap-5 mb-5 md:px-0 px-5;
 
             > div {
                 @apply rounded-3xl overflow-hidden h-72 relative;
