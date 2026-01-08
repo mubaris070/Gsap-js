@@ -6,6 +6,7 @@ import gsap from 'gsap'
 import { ScrollTrigger, SplitText } from 'gsap/all'
 import Cocktails from './Components/Cocktails'
 import About from './Components/About'
+import Menu from './Components/Menu'
 // import Gsaptext from './Components/Gsaptext'
 // import Gsaptrigger from './Components/Gsaptrigger'
 // import TestGSAP from './Components/TeastGSAP'
@@ -22,6 +23,7 @@ function App() {
   <Hero />
   <Cocktails />
   <About />
+  <Menu />
 </main>
 </>
   )
