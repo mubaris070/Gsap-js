@@ -137,7 +137,7 @@ body {
     }
 
     video {
-        @apply w-full md:h-[80%] h-[50%] absolute -bottom-5 md:bottom-0 left-0 md:object-contain object-contain object-cover;
+        @apply w-full md:h-[80%] h-1/2 absolute md:bottom-0 -bottom-20 left-0 md:object-contain object-bottom object-cover;
     }
 
     #cocktails {
