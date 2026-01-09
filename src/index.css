@@ -384,7 +384,7 @@ body {
         }
 
         .drink-img {
-            @apply absolute bottom-7 md:bottom-0 right-10 lg:w-100 w-1/3 pointer-events-none z-20;
+            @apply absolute bottom-15 md:bottom-0 right-10 lg:w-100 w-1/3 pointer-events-none z-20;
         }
     }
 }

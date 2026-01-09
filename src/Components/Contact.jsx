@@ -71,7 +71,7 @@ function Contact() {
       </div>
 
       <img src="/images/f-img.png" alt="footer-img" className='drink-img' />
-<hr className="w-full border-t border-white/60 my-8" />
+<hr className="w-full border-t border-white/60 mb-8" />
 
    
     </footer>

@@ -68,6 +68,7 @@ const tl=gsap.timeline({
 
   return (
     <Element name='home'>
+      
     <section id='hero' className='noisy'>
         <h1 className='title'>MOJITO</h1>
         <img src="/images/leaf.png" alt="left-leaf" className='left-leaf' />
