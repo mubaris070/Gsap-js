@@ -47,7 +47,7 @@ navTween.to(
                         to={link.id}
                         smooth={true}
                         duration={100}
-                        offset={-80}>
+                        >
                           {link.title}
                       </Link>
                        

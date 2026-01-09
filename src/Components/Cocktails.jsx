@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { cocktaillists, mocktaillists } from '../../constants'
 import gsap from 'gsap'
 import {ScrollTrigger} from 'gsap/all'
-import { Element } from 'react-scroll'
+// import { Element } from 'react-scroll'
 
 
 gsap.registerPlugin(ScrollTrigger)
@@ -31,7 +31,6 @@ function Cocktails() {
 
 
   return (
-    <Element name='cocktails'>
     <section id='cocktails' className='noisy'>
         <img src="/images/leaf.png" alt="l-leaf" className='c-left-leaf'/>
         <img src="/images/leaf.png" alt="r-leaf" className='c-right-leaf'/>
@@ -72,7 +71,6 @@ function Cocktails() {
 
 
     </section>
-    </Element>
   )
 }
 
