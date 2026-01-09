@@ -1,6 +1,7 @@
 import gsap from 'gsap'
 import { SplitText } from 'gsap/all'
 import React, { useEffect } from 'react'
+import { Element } from 'react-scroll'
 gsap.registerPlugin(SplitText)
 
 function About() {
@@ -26,6 +27,7 @@ useEffect(()=>{
 },[])
 
   return (
+    <Element name='about'>
     <div id='about'>
      <div className='mb-16 md:px-0 px-5'>
         <div className='content'>
@@ -77,10 +79,8 @@ useEffect(()=>{
             <img src="/images/abtimage5.png" alt="abt-image1" />
         </div>
      </div>
-
-
-
     </div>
+    </Element>
   )
 }
 

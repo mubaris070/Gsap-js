@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { allcocktails } from "../../constants"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/all"
+import { Element } from "react-scroll"
 gsap.registerPlugin(ScrollTrigger)
 function Menu(){
 
@@ -60,6 +61,7 @@ useEffect(() => {
 
 
  return (
+  <Element name="menu">
 	<section id="menu" aria-labelledby="menu-heading">
 	 {/* <img src="/images/leaf.png" alt="left-leaf" id="c-left-leaf" /> */}
 	 {/* <img src="/images/leaf.png" alt="right-leaf" id="c-right-leaf" /> */}
@@ -89,17 +91,18 @@ useEffect(() => {
      <div className="recipe">
      <div className="info">
         <p>Recipe for:</p>
-        <p id="title">{currentcocktail.name}</p>
+        <p id="title">{currentcocktail.name}</p>    
      </div>
 
      <div className="details">
-     <h2>{currentcocktail.title}</h2>
+     <h2 className={currentcocktail.color}>{currentcocktail.title}</h2>
      <p>{currentcocktail.description}</p>
      </div>
 
      </div>
 	
 	</section>
+  </Element>
  )
 }
 export default Menu

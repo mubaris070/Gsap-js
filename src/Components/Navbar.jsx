@@ -3,6 +3,7 @@ import { navLinks } from '../../constants'
 
 import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
+import { Link } from 'react-scroll';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -34,7 +35,7 @@ navTween.to(
   return (
     <nav>
         <div>
-            <a href="#home" className='flex items-center gap-2'>
+            <a href="#contact" className='flex items-center gap-2'>
                 <img src="/images/logo (1).png" alt="logo " />
                 <p>Velvet Pour</p>
             </a>
@@ -42,7 +43,14 @@ navTween.to(
             <ul>
                 {navLinks.map((link)=>(
                     <li key={link.id}>
-                        <a href={`${link.id}`}>{link.title}</a>
+                      <Link 
+                        to={link.id}
+                        smooth={true}
+                        duration={100}
+                        offset={-80}>
+                          {link.title}
+                      </Link>
+                       
                     </li>
                 ))}
             </ul>

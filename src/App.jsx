@@ -7,6 +7,7 @@ import { ScrollTrigger, SplitText } from 'gsap/all'
 import Cocktails from './Components/Cocktails'
 import About from './Components/About'
 import Menu from './Components/Menu'
+import Contact from './Components/Contact'
 // import Gsaptext from './Components/Gsaptext'
 // import Gsaptrigger from './Components/Gsaptrigger'
 // import TestGSAP from './Components/TeastGSAP'
@@ -24,6 +25,7 @@ function App() {
   <Cocktails />
   <About />
   <Menu />
+  <Contact />
 </main>
 </>
   )

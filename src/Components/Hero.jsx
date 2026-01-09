@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger, SplitText } from 'gsap/all'
 import { useMediaQuery } from 'react-responsive'
+import { Element } from 'react-scroll'
 
 gsap.registerPlugin(ScrollTrigger,SplitText)
 
@@ -66,7 +67,7 @@ const tl=gsap.timeline({
     },[])
 
   return (
-    <>
+    <Element name='home'>
     <section id='hero' className='noisy'>
         <h1 className='title'>MOJITO</h1>
         <img src="/images/leaf.png" alt="left-leaf" className='left-leaf' />
@@ -102,7 +103,7 @@ const tl=gsap.timeline({
 
      </div>
 
-    </>
+</Element>
   )
 }
 
