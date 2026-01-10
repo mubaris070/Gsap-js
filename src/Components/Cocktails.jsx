@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { cocktaillists, mocktaillists } from '../../constants'
 import gsap from 'gsap'
 import {ScrollTrigger} from 'gsap/all'
+import { Element } from 'react-scroll'
 // import { Element } from 'react-scroll'
 
 
@@ -9,32 +10,34 @@ gsap.registerPlugin(ScrollTrigger)
 
 function Cocktails() {
   useEffect(() => {
-    const mm = gsap.matchMedia()
 
-    mm.add("(min-width: 768px)", () => {
-      const leaftl = gsap.timeline({
-        scrollTrigger: {
-          trigger: '#cocktails',
-          start: 'top 50%',
-          end: 'bottom 80%',
-          scrub: true,
-        }
-      })
+	gsap
+	.timeline({
+	 scrollTrigger: {
+		trigger: "#cocktails",
+		start: "top 80%",
+		end: "bottom top",
+		scrub: true,
+	 },
+	})
+    .to(".c-left-leaf", { y: 150 }, 0)
+	.to(".c-right-leaf", { y: 150 }, 0)
+	
 
-      leaftl
-        .from('.c-left-leaf', { x: -100, y: 100 })
-        .from('.c-right-leaf', { x: 100, y: -100 })
-    })
+	
   }, [])
 
 
 
 
   return (
+    <Element name='cocktail'>
     <section id='cocktails' className='noisy'>
+        <div className='md:h-0 h-[780px]'>
+
         <img src="/images/leaf.png" alt="l-leaf" className='c-left-leaf'/>
         <img src="/images/leaf.png" alt="r-leaf" className='c-right-leaf'/>
-
+          </div>
 
         <div className='list'>
             <div className='popular'>
@@ -71,6 +74,7 @@ function Cocktails() {
 
 
     </section>
+    </Element>
   )
 }
 
